@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodoList</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <script src="app.js" type="module" defer></script>
+    <style>
+
+        .hide-completed .is-completed,
+        .hide-a .todo-1,
+        .hide-g .todo-3,
+        .hide-m .todo-maman,
+        .hide-p .todo-papa,
+        .hide-t .todo-2,
+        .hide-todo .todo:not(.is-completed){
+            display: none!important;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <section class="container pt-5" id="todolist">
+    </section>
+
+    <template id="todolist-layout">
+    <form class="d-flex pb-4">
+            <input style="max-width: 150px;" required="" class="form-control" type="text" placeholder="Destinataire" name="who" id="123" data-com.bitwarden.browser.user-edited="yes">
+            <input style="margin-left: 10px;" required="" class="form-control" type="text" placeholder="Acheter des patates..." name="title" data-com.bitwarden.browser.user-edited="yes">
+            <button style="margin-left: 13px;" class="btn btn-primary">Ajouter</button>
+    </form>
+        <main>
+            <div class="btn-group mb-4" role="group">
+                <button type="button" class=" btn btn-outline-primary active" data-filter="all">Toutes</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="todo">A faire</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="done">Faites</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="a">1</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="t">2</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="g">3</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="m">Maman</button>
+                <button type="button" class=" btn btn-outline-primary" data-filter="p">Papa</button>
+
+            </div>
+
+            <ul class="list-group">
+
+            </ul>
+        </main>
+        </template>
+
+        <template id="todolist-item">
+            <li class="todo list-group-item d-flex align-items-center">
+                <input class="form-check-input" type="checkbox" id="todo-1">
+                <label class="ms-2 form-check-label two">
+                    teesr
+                </label>
+                <label class="ms-2 form-check-label one" for="todo-1">
+                    Tâche à faire 2
+                </label>
+                <button class="ms-auto btn btn-danger btn-sm ">
+                <i class="bi-trash">
+                </i>
+                </button>
+            </li>
+        </template>
+
+</body>
+</html>
